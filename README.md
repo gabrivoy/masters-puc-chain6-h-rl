@@ -1,6 +1,6 @@
 # Simple Chain6 Environment for Hierarchical vs Flat RL Comparison
 
-This repository contains a compact, reproducible setup to compare tabular Q-learning (flat) vs a tabular hierarchical controller on the classic Chain6 environment. The goal is to show how temporal abstraction (sub-goals/options) helps discover a delayed reward path that is hard for flat exploration.
+This repository contains a compact, reproducible setup to compare tabular Q-learning (flat) vs a tabular hierarchical controller on a simple Chain6 (6 linked states) environment. The goal is to show how temporal abstraction (sub-goals/options) helps discover a delayed reward path that is hard for flat exploration.
 
 ## Quickstart
 
