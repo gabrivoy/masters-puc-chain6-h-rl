@@ -57,13 +57,13 @@ class HierarchicalTabular:
             Q1(s, a | g) ← Q1(s, a | g) + alpha1 * (y1 - Q1(s, a | g))
 
         Meta-controller (semi-MDP style on option termination):
-            Let τ be the number of controller steps taken under g,
+            Let tau be the number of controller steps taken under g,
             and R_ext the sum of extrinsic rewards observed in that option.
             If terminal:
                 y2 = R_ext
             Else:
-                y2 = R_ext + (gamma2^τ) * max_g' Q2(s_post, g')
-            Q2(s_pre, g) ← Q2(s_pre, g) + alpha2 * (y2 - Q2(s_pre, g))
+                y2 = R_ext + (gamma2^tau) * max_g' Q2(s_post, g')
+            Q2(s_pre, g) = Q2(s_pre, g) + alpha2 * (y2 - Q2(s_pre, g))
 
     Attributes:
         goals: Tuple of sub-goal states (e.g., (3, 4, 5, 6)).

@@ -80,12 +80,19 @@ def plot_comparison(
         color="k",
     )
     plt.fill_between(
-        flat_stats["x"], flat_stats["low"], flat_stats["high"], color="k", alpha=0.2
+        flat_stats["x"],
+        flat_stats["low"],
+        flat_stats["high"],
+        color="k",
+        alpha=0.2,
     )
 
     # hier
     plt.plot(
-        hier_stats["x"], hier_stats["mean"], label="h-DQN tabular", color="tab:orange"
+        hier_stats["x"],
+        hier_stats["mean"],
+        label="Q-learning hierárquico (tabular)",
+        color="tab:orange",
     )
     plt.fill_between(
         hier_stats["x"],
@@ -150,7 +157,6 @@ def write_csv(
         hier_stats: Stats dictionary for hierarchical agent.
         band_type: Band computation type to decide column names.
     """
-    # Build columns
     cols = ["step_index", "flat_mean", "hier_mean"]
     flat_low_col = "flat_low_std" if band_type == BandType.STD else "flat_p_low"
     flat_high_col = "flat_high_std" if band_type == BandType.STD else "flat_p_high"
