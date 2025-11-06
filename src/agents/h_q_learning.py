@@ -132,7 +132,9 @@ class HierarchicalTabular:
         next_state: int,
         goal: int,
     ) -> None:
-        """Per-step TD update for the controller under the current goal.
+        """
+        Per-step TD (temporal difference) update for the controller under the
+        current goal.
 
         Args:
             state: Current state before taking the action.

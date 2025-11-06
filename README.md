@@ -87,7 +87,7 @@ flowchart LR
 ### Flat tabular Q-Learning
 
 - Epsilon-greedy exploration with linear annealing.
-- Standard TD target with $\gamma$.
+- Standard temporal difference target with $\gamma$.
 - Learns a single state-action value table $Q(s, a)$.
 
 ### Hierarchical tabular controller (h-Q-learning style)

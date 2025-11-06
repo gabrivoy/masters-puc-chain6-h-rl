@@ -22,7 +22,7 @@ class FlatQLearning:
     states (1-based). Action selection is epsilon-greedy with a linear
     annealing schedule ε_t ∈ [eps_start, eps_end].
 
-    The TD target for a transition (s, a, r, s') is:
+    The TD (temporal difference) target for a transition (s, a, r, s') is:
         y = r + gamma * max_a' Q(s', a')  | if not terminal
         y = r                             | if terminal
 
